@@ -248,7 +248,7 @@ The score is stored through ScoreDAO.
 **4. Map Dashboard**
 Implemented.
 map-dashboard.jsp provides a Google Maps-based administrative map.
-It displays:
+**It displays:**
 •	Streets
 •	Coordinates
 •	Cleanliness status
@@ -257,3 +257,35 @@ It displays:
 •	AI prediction information where available
 •	Uploaded report images
 
+**5. Public Map**
+Implemented and subsequently enhanced.
+public-map.jsp provides:
+•	Public street map
+•	Cleanliness markers
+•	Street search
+•	Report button
+•	Status legend
+•	Public environmental visibility
+•	Report information in marker popups
+The map was specifically updated to support searching the 200+ populated streets.
+
+6. **Admin Dashboard**
+**Implemented.**
+admin-dashboard.jsp includes:
+•	Total streets
+•	Total reports
+•	Clean streets
+•	Moderate streets
+•	Dirty streets
+•	Priority information
+•	Cleanliness analytics
+•	Dirt Report Trends
+•	Recent dirt reports
+•	Report resolution functionality
+The dashboard is protected by session authentication.
+
+**7. Dirt Report Trends**
+Implemented.
+The admin dashboard contains a Chart.js line chart showing report trends using daily report counts/dates obtained through:
+ReportDAO.getDailyReportCounts()
+ReportDAO.getDailyReportDates()
