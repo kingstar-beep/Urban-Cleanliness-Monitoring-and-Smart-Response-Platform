@@ -367,3 +367,167 @@ Authentication also uses:
 Admin
 User
 with AdminDAO and UserDAO.
+
+**F. Business Logic**
+The original implemented scoring model was:
+Number of reports = final score
+The thresholds were:
+Report count / Score	Status
+0–2	Clean
+3–5	Moderate
+6+	Dirty
+The relevant logic was:
+if (finalScore <= 2) {
+    status = "Clean";
+} else if (finalScore <= 5) {
+    status = "Moderate";
+} else {
+    status = "Dirty";
+}
+
+**G. Google Maps Integration**
+Google Maps is one of the strongest demonstrable parts of the project.
+The system uses the Google Maps JavaScript API to create interactive maps.
+Each street is represented using its stored:
+latitude
+longitude
+
+**Markers**
+A Google Maps marker is created for each street.
+The marker contains:
+•	Street position
+•	Street name
+•	Cleanliness status
+•	Marker colour
+The marker colour is based on status:
+Status	Marker
+Clean	Green
+Moderate	Yellow
+Dirty	Red
+
+**Marker information**
+Clicking a marker displays an information window containing information such as:
+•	Street name
+•	Status
+•	AI prediction information where available
+•	Report status
+•	Uploaded report image
+
+**Street search**
+The public map was enhanced with a search box.
+Users can search for a street, and the system:
+1.	Searches the loaded street markers.
+2.	Matches the street name.
+3.	Centres the map on the street.
+4.	Zooms in.
+5.	Opens an information window.
+
+**H. Reporting and Evidence**
+Citizen report submission
+The citizen-report.jsp page is connected to the street database.
+The user selects a street from the available street records.
+The street options are populated using database information, including the street name and coordinates.
+A submitted report can contain:
+•	Selected street
+•	Report description/text
+•	Image evidence
+
+**Image upload**
+The application uses UploadReportServlet with:
+@MultipartConfig
+Uploaded images are stored and their paths are recorded with the report.
+The image can subsequently be displayed:
+•	In map information windows
+•	In the admin dashboard
+•	In report-related views
+We specifically encountered and resolved an image-upload path problem involving a FileNotFoundException.
+
+**I. Alerts**
+Email alerts: Email notification functionality was explored through JavaMail but remains a known limitation due to an unresolved SSL/library compatibility issue.
+
+**J. Security and Authentication**
+The following security/authentication features were actually implemented:
+Admin authentication
+LoginServlet handles authentication using:
+AdminDAO
+UserDAO
+
+**HTTP session management**
+Successful login creates session attributes including:
+admin
+user
+role
+
+**Role-based routing**
+The login implementation includes role-based handling for:
+•	Admin
+•	Staff
+•	Supervisor
+•	Other/public user
+Different roles are redirected to appropriate dashboards/pages.
+
+**Admin dashboard protection**
+Implemented session checks such as:
+if (session.getAttribute("admin") == null) {
+    response.sendRedirect("login.jsp");
+    return;
+}
+This prevents unauthenticated users from directly accessing protected administrative pages.
+
+**K. Problems Encountered and Solutions**
+
+**HTTP 404**
+Encountered during report submission.
+The issue was traced to servlet/page routing and the /submit-report endpoint.
+The servlet was confirmed with:
+@WebServlet("/submit-report")
+The report submission was subsequently confirmed working with:
+"Report saved to database successfully!"
+
+**HTTP 405**
+Encountered during the application development.
+This was related to incorrect HTTP method/servlet routing.
+The affected servlet workflow was corrected.
+
+**HTTP 500**
+Multiple 500 errors were encountered while developing the application.
+They included:
+•	Database/report processing problems
+•	Task assignment problems
+•	Email/SSL compatibility
+•	Java runtime/library compatibility
+
+**NumberFormatException**
+During cleanup task assignment, the system initially produced:
+java.lang.NumberFormatException
+including an issue where the submitted value contained:
+<option value=""
+The form/option handling was corrected and cleanup task assignment subsequently worked.
+The system successfully displayed:
+Cleanup task assigned successfully!
+
+**Image upload FileNotFoundException**
+An uploaded image could not initially be written to the expected path.
+The upload path handling was corrected.
+Image uploads subsequently worked and images appeared in map popups/admin views.
+
+**Incorrect street name in marker popup**
+The map initially displayed the wrong street information.
+The marker/report lookup logic was corrected so that the popup uses the correct street associated with the marker.
+
+**AI Prediction null/unknown values**
+The map initially displayed:
+•	Unknown
+•	null
+for some AI prediction fields.
+The system was adjusted to handle missing prediction values more gracefully.
+
+Blank public map
+When the street-search functionality was first introduced, the public map stopped displaying.
+The cause was JavaScript syntax/variable placement.
+Specifically, markers.push(marker) had accidentally been inserted inside the new google.maps.Marker({...}) object.
+The map/global map variable also needed correction.
+After correcting these issues:
+✅ Map loaded
+✅ Markers appeared
+✅ Search worked
