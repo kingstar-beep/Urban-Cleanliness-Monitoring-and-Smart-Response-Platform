@@ -1,3 +1,5 @@
+# Urban Cleanliness Monitoring and Smart Response Platform
+
 **Urban Cleanliness Monitoring and Smart Response Platform**
 **Purpose of the system**
 The system is a web-based urban cleanliness monitoring and response platform developed to allow citizens to report street cleanliness problems and enable council/admin users to monitor reports, assess street cleanliness, assign cleanup tasks and track operational status.
@@ -44,7 +46,7 @@ The system supports their workflow through assigned cleanup tasks and status upd
 **Supervisory/operational users**
 The application contains role-based routing for roles including Admin, Staff and Supervisor, with different dashboards/pages discussed in the project.
 
-**B. Technology Stack**
+## Technology Stack
 **Programming languages**
 **Java**
 Primary backend/application language.
@@ -126,7 +128,7 @@ NetBeans IDE was used for the Java EE development work.
 •	Browser developer/inspection tools
 •	Git/GitHub was discussed as part of project development and portfolio preparation.
 
-**C. System Architecture**
+## System Architecture
 The implemented architecture follows a layered Java EE web application structure:
 JSP / Web Interface
         ↓
@@ -219,7 +221,7 @@ The following model classes were discussed:
 **EmailUtil**
 Used/attempted for email alert functionality, although the email functionality was not successfully completed.
 
-**D. Main Modules**
+## Main Modules
 **1. Street Management**
 Implemented.
 The Street module supports storing street information including:
@@ -317,7 +319,7 @@ When a cleanup task is completed, the system was designed/updated to resolve the
 **11. PDF Reporting**
 Implemented.
 
-**E. Database**
+## Database
 The main database entities/tables are:
 **streets**
 Known fields:
@@ -368,7 +370,7 @@ Admin
 User
 with AdminDAO and UserDAO.
 
-**F. Business Logic**
+## Business Logic
 The original implemented scoring model was:
 Number of reports = final score
 The thresholds were:
@@ -385,7 +387,7 @@ if (finalScore <= 2) {
     status = "Dirty";
 }
 
-**G. Google Maps Integration**
+## Google Maps Integration
 Google Maps is one of the strongest demonstrable parts of the project.
 The system uses the Google Maps JavaScript API to create interactive maps.
 Each street is represented using its stored:
@@ -422,7 +424,7 @@ Users can search for a street, and the system:
 4.	Zooms in.
 5.	Opens an information window.
 
-**H. Reporting and Evidence**
+## Reporting and Evidence
 Citizen report submission
 The citizen-report.jsp page is connected to the street database.
 The user selects a street from the available street records.
@@ -442,10 +444,10 @@ The image can subsequently be displayed:
 •	In report-related views
 We specifically encountered and resolved an image-upload path problem involving a FileNotFoundException.
 
-**I. Alerts**
+## Alerts
 Email alerts: Email notification functionality was explored through JavaMail but remains a known limitation due to an unresolved SSL/library compatibility issue.
 
-**J. Security and Authentication**
+## Security and Authentication
 The following security/authentication features were actually implemented:
 Admin authentication
 LoginServlet handles authentication using:
@@ -474,7 +476,7 @@ if (session.getAttribute("admin") == null) {
 }
 This prevents unauthenticated users from directly accessing protected administrative pages.
 
-**K. Problems Encountered and Solutions**
+## Problems Encountered and Solutions
 
 **HTTP 404**
 Encountered during report submission.
@@ -543,7 +545,7 @@ sun.security.ssl.SSLSessionImpl.<init>(...)
 This was traced to Java/SSL/library compatibility around the email implementation.
 The email functionality was therefore not treated as completed.
 
-**L. Testing**
+## Testing
 The project was tested extensively during development through:
 
 **Browser testing**
@@ -579,7 +581,7 @@ Completed
 
 **PDF report** The Urban Cleanliness Report PDF was confirmed working.
 
-**M. Current Status**
+## Current Status
 Completed features
 
 •	Street management
@@ -630,7 +632,7 @@ The following were explicitly confirmed working during our development:
 **AI prediction** The application contains and displays an aiPrediction value associated with reports.
 **Critical classification** Implemented
 
-**N. My Contribution**
+## My Contribution
 My personal contribution to this project includes substantial hands-on development across the full application.
 •	Java EE web application development
 •	JSP interfaces
@@ -657,7 +659,7 @@ My personal contribution to this project includes substantial hands-on developme
 •	UI improvements
 •	Debugging and browser testing
 
-**O. Demonstrable Skills**
+## Demonstrable Skills
 This project demonstrates the following skills:
 
 **Software Engineering**
@@ -732,7 +734,7 @@ The project also demonstrates the ability to move beyond coding into:
 •	Prototype demonstration
 •	Academic/technical review
 
-**P. Portfolio Evidence**
+## Portfolio Evidence
 
 **1. Citizen Reporting Page**
  
