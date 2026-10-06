@@ -735,6 +735,7 @@ The project also demonstrates the ability to move beyond coding into:
 **P. Portfolio Evidence**
 
 **1. Citizen Reporting Page**
+ 
    •	Street selection <img width="567" height="224" alt="street selection" src="https://github.com/user-attachments/assets/9273dfa1-14ae-4161-99b9-69b521ff1ac9" />
 
    •	Report form <img width="482" height="476" alt="Street Environment" src="https://github.com/user-attachments/assets/6d42bf7a-354c-4ac8-9cee-14c8e313a276" />
@@ -743,7 +744,8 @@ The project also demonstrates the ability to move beyond coding into:
 
 Caption: Citizen reporting interface for submitting street cleanliness reports and supporting image evidence.
 
-2. Public GIS Map
+**2. Public GIS Map**
+
    •	200+ street markers
    •	Colour-coded status
    •	Search box
@@ -752,7 +754,8 @@ Caption: Citizen reporting interface for submitting street cleanliness reports a
 
 Caption: Public GIS monitoring map displaying street-level cleanliness status and searchable environmental locations.
 
-3. Admin Dashboard
+**3. Admin Dashboard**
+  
    •	Total streets <img width="1788" height="940" alt="image" src="https://github.com/user-attachments/assets/9218b827-7376-410e-bfd5-56e52c410316" />
 
    •	Reports <img width="1832" height="903" alt="image" src="https://github.com/user-attachments/assets/254cd1a7-e08e-46d8-bc40-ae8c41f2f8dc" />
@@ -763,6 +766,31 @@ Caption: Public GIS monitoring map displaying street-level cleanliness status an
 
    •	Report trends <img width="1824" height="924" alt="image" src="https://github.com/user-attachments/assets/2c810120-adac-4ce9-8162-4806c0901aed" />
 
+Caption: Administrative environmental monitoring dashboard providing cleanliness statistics, report trends and operational visibility.
 
+**4. Cleanup Dashboard**
+  
+   •	Street
+   •	Assigned team
+   •	Status
+   •	Assigned date
+   •	Completed date
+   <img width="1590" height="576" alt="image" src="https://github.com/user-attachments/assets/5e07a58e-e566-465e-a10b-56a6e63a8fab" />
 
+<img width="1744" height="896" alt="image" src="https://github.com/user-attachments/assets/0d5f644d-f5d1-46e3-af75-e94f65ce4089" />
 
+Caption: Cleanup operations dashboard for assigning and tracking environmental response tasks.
+
+**5. Hotspot Analytics**
+    •	Street
+    •	Total Reports
+    •	Risk Level
+<img width="1782" height="882" alt="image" src="https://github.com/user-attachments/assets/6d5b152f-4885-4fdf-9e2d-998b383d0623" />
+
+Caption: Recurring environmental hotspot analysis used to identify streets receiving repeated reports.
+
+**6. Architecture Diagram**
+
+<img width="1149" height="1369" alt="Architecture-Diagram" src="https://github.com/user-attachments/assets/3cfc5ad8-7fa8-40eb-8634-f58c68ed6b66" />
+
+Caption: Layered Java EE architecture showing JSP interfaces, servlet controllers, services, DAO persistence and MySQL database integration.
