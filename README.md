@@ -531,3 +531,212 @@ After correcting these issues:
 ✅ Map loaded
 ✅ Markers appeared
 ✅ Search worked
+
+**LoginServlet redline/role issue**
+During role-based login development, the code initially referenced user without correctly establishing the User object.
+This was identified and corrected during the authentication work.
+
+**Email SSL error**
+The application repeatedly produced:
+java.lang.NoSuchMethodError:
+sun.security.ssl.SSLSessionImpl.<init>(...)
+This was traced to Java/SSL/library compatibility around the email implementation.
+The email functionality was therefore not treated as completed.
+
+**L. Testing**
+The project was tested extensively during development through:
+
+**Browser testing**
+Testing was performed across:
+•	Chrome
+•	Firefox
+•	Microsoft Edge
+This was particularly relevant to the citizen reporting/public map workflows and JavaScript behaviour.
+
+**Functional testing**
+The following workflows were tested:
+**Street management** Street information successfully persisted in MySQL.
+
+**Report submission** Successfully reached:
+Report saved to database successfully!
+
+**Image upload** Successfully uploaded and displayed images.
+
+**Google Maps** Successfully displayed street markers.
+
+**Street search** Successfully searched the populated street database and navigated to the matching map marker.
+
+**Admin dashboard** Successfully displayed analytics and report information.
+
+**Cleanup task assignment** Successfully created cleanup tasks.
+
+**Cleanup task status** Successfully supported:
+Pending
+In Progress
+Completed
+
+**Authentication** Admin login and session protection were tested successfully.
+
+**PDF report** The Urban Cleanliness Report PDF was confirmed working.
+
+**M. Current Status**
+Completed features
+
+•	Street management
+•	Street database with 200+ populated streets
+•	Latitude/longitude storage
+•	Citizen report submission
+•	Report database persistence
+•	Image upload
+•	Report image display
+•	Cleanliness scoring
+•	Clean / Moderate / Dirty classification
+•	Google Maps integration
+•	Administrative map
+•	Public map
+•	Street search on public map
+•	Map markers
+•	Marker information windows
+•	Admin dashboard
+•	Cleanliness analytics
+•	Dirt Report Trends
+•	Recurring Dirty Hotspots
+•	Cleanup task assignment
+•	Cleanup task status management
+•	Report resolution workflow
+•	Admin login
+•	Session protection
+•	Role-based login routing
+•	PDF reporting
+•	Sidebar/navigation improvements
+
+
+**Working features**
+The following were explicitly confirmed working during our development:
+•	Public map
+•	Google Maps markers
+•	Street search
+•	Citizen reporting
+•	Image upload
+•	Admin dashboard
+•	Cleanup dashboard
+•	Cleanup task assignment
+•	Cleanup status updates
+•	Login/session protection
+•	PDF report
+
+**Features still being improved**
+**Email notification** Attempted but not successfully completed because of the SSL/library compatibility error.
+**AI prediction** The application contains and displays an aiPrediction value associated with reports.
+**Critical classification** Implemented
+
+**N. My Contribution**
+My personal contribution to this project includes substantial hands-on development across the full application.
+•	Java EE web application development
+•	JSP interfaces
+•	Java Servlets
+•	MySQL database integration
+•	Street management
+•	Report management
+•	Image upload
+•	Cleanliness scoring
+•	Google Maps integration
+•	Map marker visualisation
+•	Public map
+•	Street search
+•	Admin dashboard
+•	Analytics
+•	Hotspot analysis
+•	Cleanup task management
+•	Task status workflow
+•	Report resolution
+•	Authentication
+•	Session protection
+•	Role-based routing
+•	PDF reporting
+•	UI improvements
+•	Debugging and browser testing
+
+**O. Demonstrable Skills**
+This project demonstrates the following skills:
+
+**Software Engineering**
+•	Java EE development
+•	MVC-style/layered application design
+•	Servlet development
+•	JSP development
+•	DAO pattern
+•	Separation of models, controllers, services and persistence
+
+**Backend Development**
+•	Java
+•	JDBC
+•	MySQL
+•	Database CRUD operations
+•	Business logic implementation
+•	Session management
+
+**Frontend Development**
+•	HTML
+•	CSS
+•	JavaScript
+•	JSP
+•	Responsive dashboard layouts
+•	Interactive interfaces
+
+**GIS**
+•	Google Maps API
+•	Latitude/longitude data
+•	Geospatial marker visualisation
+•	Interactive map information windows
+•	Street search
+
+**Data/Analytics**
+•	Report aggregation
+•	Cleanliness scoring
+•	Status classification
+•	Trend analysis
+•	Hotspot identification
+•	Chart.js visualisation
+
+**File Handling**
+•	Multipart file uploads
+•	Image storage
+•	Image retrieval/display
+•	PDF reporting
+
+**Debugging**
+You demonstrated practical debugging of:
+•	HTTP 404
+•	HTTP 405
+•	HTTP 500
+•	NumberFormatException
+•	FileNotFoundException
+•	JavaScript errors
+•	Java/SSL library compatibility issues
+•	Database/report persistence issues
+
+**Security**
+•	Authentication
+•	HTTP sessions
+•	Role-based routing
+•	Protected administrative pages
+
+**Stakeholder/Systems Thinking**
+The project also demonstrates the ability to move beyond coding into:
+•	Requirements thinking
+•	Operational workflow design
+•	Council stakeholder engagement
+•	Technical proposal writing
+•	System architecture documentation
+•	Prototype demonstration
+•	Academic/technical review
+
+**P. Portfolio Evidence**
+
+1. Citizen Reporting Page
+   •	Street selection
+   •	Report form
+   •	Image upload
+2. 
+
