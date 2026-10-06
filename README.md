@@ -734,9 +734,35 @@ The project also demonstrates the ability to move beyond coding into:
 
 **P. Portfolio Evidence**
 
-1. Citizen Reporting Page
-   •	Street selection
-   •	Report form
-   •	Image upload
-2. 
+**1. Citizen Reporting Page**
+   •	Street selection <img width="567" height="224" alt="street selection" src="https://github.com/user-attachments/assets/9273dfa1-14ae-4161-99b9-69b521ff1ac9" />
+
+   •	Report form <img width="482" height="476" alt="Street Environment" src="https://github.com/user-attachments/assets/6d42bf7a-354c-4ac8-9cee-14c8e313a276" />
+   
+   •	Image upload <img width="1088" height="346" alt="image" src="https://github.com/user-attachments/assets/6e4681e9-ae72-4a76-9ce2-697eb247ca00" />
+
+Caption: Citizen reporting interface for submitting street cleanliness reports and supporting image evidence.
+
+2. Public GIS Map
+   •	200+ street markers
+   •	Colour-coded status
+   •	Search box
+   •	Map interface
+   <img width="1892" height="838" alt="image" src="https://github.com/user-attachments/assets/f3e9d944-6934-4d69-b62b-942199d5ec67" />
+
+Caption: Public GIS monitoring map displaying street-level cleanliness status and searchable environmental locations.
+
+3. Admin Dashboard
+   •	Total streets <img width="1788" height="940" alt="image" src="https://github.com/user-attachments/assets/9218b827-7376-410e-bfd5-56e52c410316" />
+
+   •	Reports <img width="1832" height="903" alt="image" src="https://github.com/user-attachments/assets/254cd1a7-e08e-46d8-bc40-ae8c41f2f8dc" />
+
+   •	Clean/Moderate/Dirty counts <img width="1825" height="894" alt="image" src="https://github.com/user-attachments/assets/b92402d6-3b0b-47b1-baf6-8b371d42f9cc" />
+
+   •	Analytics <img width="1829" height="739" alt="image" src="https://github.com/user-attachments/assets/fe2f29df-b58b-4627-885e-b641ca37242d" />
+
+   •	Report trends <img width="1824" height="924" alt="image" src="https://github.com/user-attachments/assets/2c810120-adac-4ce9-8162-4806c0901aed" />
+
+
+
 
