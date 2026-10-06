@@ -1,70 +1,44 @@
-# ==============================
 # NetBeans
-# ==============================
-
-# NetBeans user-specific configuration
 /nbproject/private/
 /nbbuild/
 /nbdist/
 .nb-gradle/
 
-# ==============================
-# Java Build Output
-# ==============================
-
+# Java build output
 /build/
 /dist/
 *.class
 
-# ==============================
-# Logs
-# ==============================
+# Runtime uploaded files
+/uploads/
+/web/uploads/
+/build/web/uploads/
 
+# Logs
 *.log
 
-# ==============================
-# Temporary Files
-# ==============================
-
+# Temporary files
 *.tmp
 *.temp
 *.swp
 *.swo
 *~
 
-# ==============================
-# Operating System Files
-# ==============================
-
+# Operating system files
 .DS_Store
 Thumbs.db
 
-# ==============================
-# IDE / Editor Files
-# ==============================
-
+# IDE files
 .idea/
 .vscode/
 *.iml
 
-# ==============================
-# Local Configuration / Secrets
-# ==============================
-
+# Local configuration / secrets
 .env
 .env.*
 *.local
 
-# ==============================
-# Database / Backup Files
-# ==============================
-
+# Database / backup files
 *.sql
 *.sql.gz
 *.bak
-
-# ==============================
-# Runtime Uploaded Files
-# ==============================
-
-/uploads/
