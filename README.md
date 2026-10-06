@@ -269,7 +269,7 @@ public-map.jsp provides:
 •	Report information in marker popups
 The map was specifically updated to support searching the 200+ populated streets.
 
-6. **Admin Dashboard**
+**6. Admin Dashboard**
 **Implemented.**
 admin-dashboard.jsp includes:
 •	Total streets
@@ -289,3 +289,81 @@ Implemented.
 The admin dashboard contains a Chart.js line chart showing report trends using daily report counts/dates obtained through:
 ReportDAO.getDailyReportCounts()
 ReportDAO.getDailyReportDates()
+
+**8. Recurring Dirty Hotspots**
+Implemented.
+The hotspot analytics page provides a table containing:
+Street
+Total Reports
+Risk Level
+This identifies streets receiving repeated reports.
+
+**9. Cleanup Task Management**
+Implemented.
+The system supports:
+•	Assigning cleanup tasks
+•	Assigning a team
+•	Pending status
+•	In Progress status
+•	Completed status
+•	Assigned date
+•	Completed date
+The cleanup dashboard allows operational staff to update task status.
+
+**10. Report Resolution**
+Implemented.
+When a cleanup task is completed, the system was designed/updated to resolve the related reports for that street so the operational workflow can reflect that the reported issue has been addressed.
+
+**11. PDF Reporting**
+Implemented.
+
+**E. Database**
+The main database entities/tables are:
+**streets**
+Known fields:
+id
+name
+city
+latitude
+longitude
+Relationship:
+streets.id
+      ↓
+reports.street_id
+scores.street_id
+cleanup_tasks.street_id
+
+**reports**
+Known/discussed information includes:
+id
+street_id
+type
+source
+report text
+image path
+AI prediction
+status
+
+**scores**
+The score entity contains information represented by:
+street_id
+complaint_count
+final_score
+status
+The score is associated with a street.
+
+**cleanup_tasks**
+Known fields represented in the application include:
+id
+street_id
+assigned_team
+task_status
+assigned_date
+completed_date
+The street_id links the cleanup task to the relevant street.
+
+**Users/Admin**
+Authentication also uses:
+Admin
+User
+with AdminDAO and UserDAO.
